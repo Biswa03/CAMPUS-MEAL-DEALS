@@ -1,0 +1,167 @@
+
+@font-face {
+  font-family: 'CustomFont';
+  src: url('../../src/Fonts/Odachi.woff') format('woff');
+       /* url('../../src/Fonts/Alvarado-Bold.otf') format('otf'); */
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'CustomFont2';
+  src:url('../../src/Fonts/Alvarado/Alvarado-Bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'CustomFont3';
+  src:url('../../src/Fonts/Noir/Noir_regular.woff') format('woff'),
+      url('../../src/Fonts/Noir/Noir_medium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'CustomFont4';
+  src:url('../../src/Fonts/Azonix/Azonix.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+.meal-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; 
+  font-family: 'CustomFont3', sans-serif;
+    
+  }
+  
+  .day-label {
+    margin-right: 20px; /* Adjust spacing as needed */
+    font-weight: bold;
+  }
+  
+  .meal {
+    text-align: center;
+  }
+
+  .meal-day{
+    display: flex;
+    width: 15%;
+    align-items: center;
+    gap: 0.2rem;
+  }
+  .meal-day h3{
+    font-size: 2rex;
+  }
+/* Container for the entire menu */
+.meal-menu {
+  width: 85%;
+  display: flex;
+  /* /* flex-wrap: wrap; */
+  margin: 0.2rem 0;
+  padding: 0;
+  list-style: none;
+  justify-content: space-between; /* Distributes space around the meal items */
+}
+/* Individual meal items */
+.meal-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center; 
+  width: 20rem; 
+  height: 5rem;
+  margin: 0.3rem;
+  padding: 0.2rem;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px; 
+  background-color: #f9f9f9; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+  cursor: pointer;
+  gap: 0.4rem;
+  position: relative; 
+}
+
+.add-to-cart {
+  display: none; 
+  position: absolute; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 0.5rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.meal-item:hover .add-to-cart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cart-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-bottom: 0.2rem;
+}
+.added-to-cart {
+  position: absolute; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 0.5rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* Meal image styling */
+.meal-image {
+  height: 100%;
+  width: 25%;
+  object-fit: cover; 
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* Text styling for the meal name */
+.meal-item p {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  color: #333; /* Darker text color for contrast */
+  margin: 0;
+}
+
+
+
+@media (max-width: 768px) {
+  .meal-menu {
+    width: 90%;
+  }  
+}
+@media (max-width: 480px) {
+  .meal-menu {
+    width: 93%;
+    justify-content: space-between;
+  }  
+  .meal-row{
+    height: 7.3rem;
+  }
+  .meal-row h3{
+    font-size: 1rem;
+  }
+  .meal-day{
+    height: 2.5rem;
+  }
+  .meal-menu{
+    height: 4rem;
+  }
+  .meal-menu p{
+    font-size: 0.8rem;
+  }
+  .meal-item{
+    height: 3.5rem;
+    margin: 0.1rem;
+  }
+}

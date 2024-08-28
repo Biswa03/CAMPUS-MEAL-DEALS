@@ -1,0 +1,362 @@
+:root {
+    --primary-color: #FF9800;
+    --secondary-color: #333;
+    --background-color: #fff;
+    --text-color: #000;
+    --font-size-base: 1rem;
+    --padding: 1.5rem;
+    --veg-color: green;
+    --non-veg-color: red;
+}
+@font-face {
+    font-family: 'CustomFont';
+    src: url('../../src/Fonts/Odachi.woff') format('woff');
+         /* url('../../src/Fonts/Alvarado-Bold.otf') format('otf'); */
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'CustomFont2';
+    src:url('../../src/Fonts/Alvarado/Alvarado-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'CustomFont3';
+    src:url('../../src/Fonts/Noir/Noir_regular.woff') format('woff'),
+        url('../../src/Fonts/Noir/Noir_medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'CustomFont4';
+    src:url('../../src/Fonts/Azonix/Azonix.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+.footer h2{
+    font-family: 'CustomFont3', sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: 'CustomFont3', sans-serif;
+    /* font-family: Arial, sans-serif; */
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+.coupon-container{
+    padding: 0rem 7rem;
+    margin: 0rem;
+}
+.coupon-container h1{
+    margin: 2rem 0rem;
+    font-family: 'CustomFont3', sans-serif;
+}
+.meal-coupons {
+    margin: var(--padding) 0;
+}
+
+.meal-coupons h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+.select-all button{
+    margin: 0.2rem;
+    padding: 1rem 1.6rem 0.8rem 1.6rem;
+    background-color: #ff4d4d;
+    color: #ffffff;
+    border-radius: 0.3rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: bold;
+    font-size: 1rem;
+    font-family: 'CustomFont3', Arial, Helvetica, sans-serif;
+    align-items: center;
+    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.3);
+}
+.select-all-button:hover{
+    background-color: #e32d2d; 
+    color: #ffcccc;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+
+.added-all-items{
+    /* width: 12rem; */
+    margin: 0.1rem;
+    padding: 0.2rem 1.8rem;
+    background-color: #dc4a4a;
+    color: #ffffff;
+    border-radius: 0.3rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+.added-all-items:hover{
+    background-color: #e32d2d; 
+    color: #ffcccc;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.filter-select-all{
+    display: flex;
+    justify-content: space-between;
+}
+.filter-buttons {
+    display: flex;
+    justify-content: start;
+    margin-bottom: 1rem;
+    gap: 1.5rem;
+    font-family: 'CustomFont3', Arial, Helvetica, sans-serif;
+}
+
+
+.filter-btn {
+    padding: 0.6rem 1.3rem;
+    border-radius: 0.5rem;
+    border: 2px solid transparent;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    font-family: 'CustomFont3', Arial, Helvetica, sans-serif;
+    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.3);
+
+}
+.vegetarian {
+    background-color: #2cc02c;
+    color: var(--background-color);
+}
+
+.vegetarian:hover {
+    background-color: #59d959; /* Darker green */
+    color: #fff;
+}
+
+.vegetarian.active {
+    background-color: #116711; /* Even darker green */
+    color: #e0da14;
+    border: 3.5px solid #ffffff;
+    box-shadow: none;
+
+}
+
+.non-vegetarian {
+    background-color: #ef2e2e;
+    color: var(--background-color);
+}
+
+.non-vegetarian:hover {
+    background-color: #ff4d4d; /* Darker red */
+    color: #fff;
+}
+
+.non-vegetarian.active {
+    background-color: #ba0909; /* Even darker red */
+    color: #fff12f;
+    border: 3.5px solid #ffffff;
+    box-shadow: none;
+
+}
+/* 
+.filter-btn {
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.5rem;
+    border: 2px solid transparent;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+} */
+
+
+.name-tags{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.day{
+    width: 10%;
+}
+.bld{
+    width: 85%;
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 7rem;
+}
+.meal-week-menu{
+    display: flex;
+    flex-direction: column;
+}
+
+.go-to-cart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.go-to-cart-button{
+    font-family: 'CustomFont3', sans-serif;
+    margin: 0.2rem;
+    padding: 0.8rem 1.8rem;
+    background-color: #ff4d4d;
+    color: #ffffff;
+    border-radius: 0.3rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 0.9rem 1.5rem 0.6rem 1.5rem;
+    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.3);
+}
+.go-to-cart-button:hover{
+    background-color: #e32d2d; 
+    color: #ffcccc;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+    .coupon-container{
+        padding: 0rem 3rem;
+        margin: 0rem;
+    }
+    .meal-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .day-column {
+        display: none;
+    }
+
+    .meal-row {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .meal-image {
+        margin: 0 auto 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .coupon-container{
+        padding: 0rem 1.4rem;
+        margin: 0rem;
+    }
+    .coupon-container h1{
+        font-size: large;
+    }
+    .meal-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .day-column {
+        display: none;
+    }
+
+    .meal-row {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .meal-image {
+        margin: 0 auto 1rem;
+    }
+}
+
+
+/* Responsive Design for Mobile Screens */
+@media (max-width: 768px) {
+    .coupon-container{
+        padding: 0rem 2rem;
+    }
+    .select-all-button, .filter-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .added-all-items p {
+        font-size: 0.9rem;
+    }
+
+    .cart-icon {
+        font-size: 1rem;
+    }
+
+    .filter-buttons {
+        gap: 1rem;
+    }
+    .go-to-cart-button{
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .select-all-button, .filter-btn {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+    }
+
+    .added-all-items p {
+        font-size: 0.8rem;
+    }
+
+    .cart-icon {
+        font-size: 0.9rem;
+    }
+    
+
+    .filter-buttons {
+        /* flex-direction: column; */
+        gap: 0.5rem;
+    }
+
+    .filter-select-all {
+        flex-direction: column;
+        align-items: center;
+    }
+    .go-to-cart-button{
+        font-size: 0.9rem;
+        padding: 0.6rem 1.2rem;
+    }
+    .name-tags{
+        font-size: 0.6rem;
+    }
+    
+    .day{
+        display: none;
+    }
+    .bld{
+        width: 85%;
+        padding: 0 2rem;
+        height: 3rem;
+        align-items: center;
+        margin-top: 0.4rem;
+        margin-bottom: 1rem;
+    }
+    .bld h1{
+        font-size: 0.8rem;
+    }
+    .coupon-container h1{
+        margin: 2rem 0rem 1rem 0rem;
+        font-family: 'CustomFont3', Arial, Helvetica, sans-serif;
+        font-size: larger;
+    }
+    
+    .select-all button{
+        /* margin: 0.2rem; */
+        padding: 0.6rem 0.9rem 0.3rem 0.9rem;
+        font-size: 0.8rem;
+    }
+    .go-to-cart button{
+        padding: 0.6rem 0.9rem 0.3rem 0.9rem;
+        font-size: 0.7rem;
+        box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.3);
+    }
+}
